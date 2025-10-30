@@ -1,0 +1,3 @@
+127.0.0.1 - user [24/Oct/2025:10:30:01 +0530] "GET /index.html HTTP/1.1" 200 1234
+192.168.1.10 - - [24/Oct/2025:10:30:05 +0530] "GET /images/logo.png HTTP/1.1" 200 5678
+10.0.0.5 - admin [24/Oct/2025:10:30:10 +0530] "POST /submit_form.php HTTP/1.1" 302 -
