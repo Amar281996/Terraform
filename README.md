@@ -27,38 +27,6 @@ This repository contains a Terraform module for deploying an Nginx server on AWS
    cd example
    ```
 
-2. Choose your deployment method:
-
-   **Using PowerShell script (Windows):**
-   ```powershell
-   # Initialize terraform
-   .\deploy.ps1 dev init
-   
-   # Plan deployment for development
-   .\deploy.ps1 dev plan
-   
-   # Apply for development
-   .\deploy.ps1 dev apply
-   
-   # For staging
-   .\deploy.ps1 stg plan
-   .\deploy.ps1 stg apply
-
-   **Using Bash script (Linux/Mac):**
-   ```bash
-   # Make script executable
-   chmod +x deploy.sh
-   
-   # Initialize terraform
-   ./deploy.sh dev init
-   
-   # Plan and apply for different environments
-   ./deploy.sh dev plan
-   ./deploy.sh dev apply
-   ./deploy.sh stg apply
-   ./deploy.sh prod apply
-   ```
-
    **Manual terraform commands:**
    ```bash
    # Initialize
@@ -88,9 +56,9 @@ The repository includes pre-configured tfvars files for different environments:
 
 | Environment | File | Instance Type | Security | Description |
 |-------------|------|---------------|----------|-------------|
-| **Development** | `dev.tfvars` | t2.micro | Less restrictive | Open access for development and testing |
-| **Staging** | `stg.tfvars` | t3.small | Moderate restrictions | HTTPS enabled, limited SSH access |
-| **Production** | `prod.tfvars` | t3.medium | Most restrictive | SSH only from bastion hosts |
+| **Development** | `dev.tfvars` | Open access for development and testing |
+| **Staging** | `stg.tfvars` | HTTPS enabled, limited SSH access |
+
 
 ## Module Inputs
 
@@ -178,3 +146,4 @@ python s3-file-upload.py --file "./logs.txt" --bucket "assesment-logs" --profile
 ```
 
 ```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
